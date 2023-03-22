@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function landing() {
   return (
@@ -8,8 +9,8 @@ export default function landing() {
         <h1>Alquiler de terrazas</h1>
         <nav>
           <h1> logo </h1>
-          <link to="login"> Iniciar Sesion</link>
-          <link to="signup"> Registrarse</link>
+          <Link to="login"> Iniciar Sesion </Link>
+          <Link to="signup"> Registrarse </Link>
         </nav>
       </header>
       <section>
