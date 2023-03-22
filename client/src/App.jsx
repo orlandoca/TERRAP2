@@ -5,24 +5,44 @@ import { MyRoutes } from "./routes/routes";
 
 export default function App() {
   return (
-    <>
+    <div className="container-fluid">
       <BrowserRouter>
-        <div>
-          <div className="row">
-            <div className="col-3 " style={{ backgroundColor: "CadetBlue" }}>
-              <Sidebar />
+        <div className="row">
+          <div
+            className="col-sm-3 col-lg-2"
+            style={{ backgroundColor: "CadetBlue" }}
+          >
+            <div className="col-12 text-center">
+              <img
+                src="https://i.imgur.com/J5cQGer.png"
+                width="180"
+                height="120"
+                alt="Terrap Logo"
+                className="mx-auto my-auto"
+              />
             </div>
-            <div className="col-9" style={{ backgroundColor: "white" }}>
-              <div className="row">
-                <Navbar />
-              </div>
-              <div className="row container">
-                <MyRoutes />
-              </div>
+          </div>
+          <div className="col-sm-9 col-lg-10">
+            <Navbar />
+          </div>
+        </div>
+        <div className="row vh-100">
+          <div
+            className="col-sm-3 col-lg-2"
+            style={{ backgroundColor: "CadetBlue" }}
+          >
+            <Sidebar />
+          </div>
+          <div
+            className="col-sm-9 col-lg-10"
+            // style={{ backgroundColor: "red" }}
+          >
+            <div className="row h-100 align-items-start">
+              <MyRoutes />
             </div>
           </div>
         </div>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
