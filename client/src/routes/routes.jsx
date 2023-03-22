@@ -10,6 +10,7 @@ import UserHome from "../pages/UserHome";
 import UserAdd from "../pages/UserAdd";
 import UserDetailcomp from "../components/UserDetailcomp";
 import UserEditComp from "../components/UserEditComp";
+import LandingPage from "../pages/LandingPage";
 
 export function MyRoutes() {
   return (
@@ -24,6 +25,7 @@ export function MyRoutes() {
       <Route path="/user/new" element={<UserAdd />} />
       <Route path="/user/edit/:id" element={<UserEditComp />} />
       <Route path="/user/detail/:id" element={<UserDetailcomp />} />
+      <Route path="/landing" element={<LandingPage />} />
     </Routes>
   );
 }
