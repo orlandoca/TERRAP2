@@ -15,7 +15,7 @@ import LandingPage from "../pages/LandingPage";
 export function MyRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="/booking/home" element={<BookingHome />} />
       <Route path="/booking/new" element={<BookingAdd />} />
       <Route path="/booking/detail/:id" element={<BookingDetail />} />
@@ -25,7 +25,7 @@ export function MyRoutes() {
       <Route path="/user/new" element={<UserAdd />} />
       <Route path="/user/edit/:id" element={<UserEditComp />} />
       <Route path="/user/detail/:id" element={<UserDetailcomp />} />
-      <Route path="/landing" element={<LandingPage />} />
+      <Route path="/home" element={<Home />} />
     </Routes>
   );
 }

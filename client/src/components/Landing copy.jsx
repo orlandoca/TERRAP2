@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import LoginButton from "./LoginButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
-export default function landing() {
+export default function Landing() {
+  const { user, isAuthenticated, loginWithRedirect } = useAuth0();
+
   return (
     <div className="landing-page">
       landing
@@ -9,8 +12,7 @@ export default function landing() {
         <h1>Alquiler de terrazas</h1>
         <nav>
           <h1> logo </h1>
-          <Link to="login"> Iniciar Sesion </Link>
-          <Link to="signup"> Registrarse </Link>
+          <LoginButton />
         </nav>
       </header>
       <section>
@@ -26,8 +28,8 @@ export default function landing() {
         </div>
       </section>
       <section>
-        <div className="row">
-          <div className="col-md-4">
+        {/* <div className="row">
+          <div className="col-md-3">
             <div class="text-center">
               <img
                 src="ruta-de-la-imagen-1.jpg"
@@ -41,7 +43,7 @@ export default function landing() {
               </p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="text-center">
               <img
                 src="ruta-de-la-imagen-2.jpg"
@@ -55,21 +57,22 @@ export default function landing() {
               </p>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <div className="text-center">
               <img
                 src="ruta-de-la-imagen-3.jpg"
                 alt="Eventos corporativos"
                 className="img-fluid"
               />
-              <h3>Eventos corporativos</h3>
+              <h3>Eventos corporativos</h3> 
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                 maximus mauris quis venenatis rutrum.
               </p>
             </div>
           </div>
-        </div>
+          <div className="col-md-3"></div>
+        </div> */}
       </section>
     </div>
   );

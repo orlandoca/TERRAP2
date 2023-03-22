@@ -5,8 +5,18 @@ const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
   return (
-    <button className="btn btn-link" onClick={() => loginWithRedirect()}>
-      Iniciar Sesion
+    <button
+      className="btn btn-link"
+      onClick={() =>
+        loginWithRedirect({
+          // redirect_uri: "https://www.google.com/",
+          returnTo: "https://www.google.com/",
+
+          // redirect_uri: "http://localhost:5173/home",
+        })
+      }
+    >
+      Iniciar Sesión
     </button>
   );
 };

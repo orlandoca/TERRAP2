@@ -1,10 +1,10 @@
 import React from "react";
-import landing from "../components/landing";
+import Landing from "../components/Landing";
 
 export default function LandingPage() {
   return (
     <div>
-      <landing />
+      <Landing />
     </div>
   );
 }
