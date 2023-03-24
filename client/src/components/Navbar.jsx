@@ -32,6 +32,7 @@ export default function Navbar() {
             <i className="bi bi-search"></i>
           </button>
         </form>
+
         {/* fin buscar */}
 
         {/* perfil */}
