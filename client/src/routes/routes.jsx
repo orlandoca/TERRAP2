@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Landing from "../components/Landing";
 
 import BookingHome from "../pages/BookingHome";
 import Home from "../pages/Home";
@@ -10,8 +11,6 @@ import UserHome from "../pages/UserHome";
 import UserAdd from "../pages/UserAdd";
 import UserDetailcomp from "../components/UserDetailcomp";
 import UserEditComp from "../components/UserEditComp";
-import LandingPage from "../pages/LandingPage";
-import Landing from "../components/landing";
 
 export function MyRoutes() {
   return (

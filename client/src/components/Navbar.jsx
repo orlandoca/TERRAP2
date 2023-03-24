@@ -12,17 +12,6 @@ export default function Navbar() {
         className="navbar navbar-expand-lg "
         style={{ backgroundColor: "Navy" }}
       >
-        <div className="col-sm-3 col-lg-2">
-          <div className="col ">
-            <img
-              src="https://i.imgur.com/J5cQGer.png"
-              width="100"
-              height="50"
-              alt="Terrap Logo"
-              className="mx-auto my-auto"
-            />
-          </div>
-        </div>
         <button
           className="navbar-toggler"
           type="button"
