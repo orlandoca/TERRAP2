@@ -11,11 +11,12 @@ import UserAdd from "../pages/UserAdd";
 import UserDetailcomp from "../components/UserDetailcomp";
 import UserEditComp from "../components/UserEditComp";
 import LandingPage from "../pages/LandingPage";
+import Landing from "../components/landing";
 
 export function MyRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<Landing />} />
       <Route path="/booking/home" element={<BookingHome />} />
       <Route path="/booking/new" element={<BookingAdd />} />
       <Route path="/booking/detail/:id" element={<BookingDetail />} />

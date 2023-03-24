@@ -7,9 +7,9 @@ export default function Landing() {
   const { user, isAuthenticated, loginWithRedirect } = useAuth0();
 
   return (
-    <div className="container border-3 align-items-center justify-content-center bg-secondary">
+    <div className="container border-3 align-items-center justify-content-center ">
       &nbsp;
-      <nav className="d-flex justify-content-between bg-secondary">
+      <nav className="d-flex justify-content-between ">
         <h1> logo </h1>
         <LoginButton />
         <LogoutButton />
@@ -83,10 +83,25 @@ export default function Landing() {
         </div>
       </div>
       &nbsp;
+      <div className="row border border-primary justify-content-center d-flex">
+        <div className="col text-center mr-3">
+          Contactanos en nuestras redes sociales
+        </div>
+        <div className="col text-center mr-3">
+          <i class="bi bi-facebook"></i>Facebook
+        </div>
+        <div className="col text-center mr-3">
+          <i class="bi bi-twitter"></i>Twiter
+        </div>
+        <div className="col text-center">
+          <i class="bi bi-instagram"></i>Instagram
+        </div>
+      </div>
+      &nbsp;
       <div className="row border border-primary justify-content-center">
         <div className="col text-center">
-          COPYRIGTH 2023-NOMBRE DE LA APP &nbsp; TERMINOS Y CONDICIONES &nbsp;
-          POLITICA Y PRIVACIDAD
+          COPYRIGTH 2023-TERRAP &nbsp; TERMINOS Y CONDICIONES &nbsp; POLITICA Y
+          PRIVACIDAD
         </div>
       </div>
       &nbsp;

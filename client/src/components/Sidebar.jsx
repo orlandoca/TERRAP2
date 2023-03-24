@@ -7,7 +7,7 @@ export default function Sidebar() {
   return (
     <div>
       <div className="row">
-        <Link to="/" className="d-block p-3 text-light">
+        <Link to="/home" className="d-block p-3 text-light">
           <i className="bi bi-house-fill lead m-2"></i>
           Home{" "}
         </Link>
@@ -21,16 +21,6 @@ export default function Sidebar() {
             <i className="bi bi-person-circle m-2 lead "></i>Inquilinos
           </Link>
         )}
-
-        {/* <Link to="/">
-          <span>Home</span>
-        </Link>
-        <Link to="/booking/home">
-          <span>Reservas</span>
-        </Link>
-        <Link to="/user/home">
-          <span>Inquilinos</span>
-        </Link> */}
       </div>
     </div>
   );

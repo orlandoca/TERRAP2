@@ -10,9 +10,9 @@ const LoginButton = () => {
       onClick={() =>
         loginWithRedirect({
           // redirect_uri: "https://www.google.com/",
-          returnTo: "https://www.google.com/",
+          //returnTo: "https://www.google.com/",
 
-          // redirect_uri: "http://localhost:5173/home",
+          redirect_uri: "http://localhost:5173/home",
         })
       }
     >
