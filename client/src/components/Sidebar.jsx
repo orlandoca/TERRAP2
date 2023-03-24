@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 export default function Sidebar() {
   const { isAuthenticated } = useAuth0();
   return (
-    <div>
-      <div className="row">
+    <div
+      className="col-md-2 d-none d-md-block vh-100"
+      style={{ backgroundColor: "Navy" }}
+    >
+      <div className="row ">
         <Link to="/home" className="d-block p-3 text-light">
           <i className="bi bi-house-fill lead m-2"></i>
           Home{" "}
