@@ -6,7 +6,7 @@ const LoginButton = () => {
 
   return (
     <button
-      className="btn btn-link"
+      className="btn btn-primary"
       onClick={() =>
         loginWithRedirect({
           // redirect_uri: "https://www.google.com/",
