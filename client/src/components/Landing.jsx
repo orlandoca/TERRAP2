@@ -93,23 +93,49 @@ export default function Landing() {
             </div>
           </div>
         </div>
+        &nbsp;
+        <div className="row">
+          <div className="col justify-content-center">
+            <h2> Busca un espacio</h2>
+            <p>
+              Eliga el espacio que se adapte a sus necesidades entre las que
+              tenemos en TERRAPP.
+            </p>
+          </div>
+          <div className="col justify-content-center">
+            <h2>Contacta con el anfitrion </h2>
+            <p> Podras comunicarte con el anfitrion y cerrar un trato </p>
+          </div>
+
+          <div className="col justify-content-center">
+            <h2>Confirma tu reserva</h2>
+            <p>
+              Cuando acepte tu solicitud solo resta pagar para confirmar tu
+              reserva
+            </p>
+          </div>
+        </div>
         <br />
-        <div className="row  justify-content-center align-items-center">
-          <div className="col text-center">
-            <p>- Terrapp</p>
-            <p>- Pagina Dedicada a eventos </p>
-            <p>- Av. Francia Encarnacion,Paraguay</p>
+        <div className="row align-items-center">
+          <div className="col text-center justify-content-center">
+            <h2> Terrapp</h2>
+            <h3> Portal que ayuda a convertir tus eventos en realidad </h3>
+            <p>
+              <i class="bi bi-geo-fill"></i> Av. Francia Encarnacion,Paraguay
+            </p>
           </div>
           <div className="col text-center">
             <h2> Preguntas frecuentes</h2>
             <br />
-            <p>- Acerca de TERRAP</p>
+            <p>- Acerca de TERRAPP</p>
             <p>- Cuanto cuesta utilizar los servicios de la app</p>
-            <p>- Como Funciona -Como Pago mi reserva</p>
+            <p>- Como Funciona</p>
+            <p>-Como Pago mi reserva</p>
           </div>
         </div>
         &nbsp;
-        <div className="row border border-primary justify-content-center d-flex">
+        <br />
+        <div className="row  justify-content-center d-flex">
           <div className="col text-center mr-3">
             Contactanos en nuestras redes sociales
           </div>
@@ -124,7 +150,7 @@ export default function Landing() {
           </div>
         </div>
         &nbsp;
-        <div className="row border border-primary justify-content-center">
+        <div className="row justify-content-center">
           <div className="col text-center">
             COPYRIGTH 2023-TERRAP &nbsp; TERMINOS Y CONDICIONES &nbsp; POLITICA
             Y PRIVACIDAD
