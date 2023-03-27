@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
+import BookingReport from "./BookingReport";
 
 export default function BookingComp() {
   const [bookings, setBookings] = useState([]);
@@ -50,7 +51,12 @@ export default function BookingComp() {
 
   return (
     <div>
-      <h1>Lista De Reservas</h1>
+      <div className="d-flex justify-content-between align-items-center mb-2">
+        <h1 className="mb-0">Lista De Reservas</h1>
+        <div className="ml-auto">
+          <BookingReport />
+        </div>
+      </div>
       <div className="row pb-3">
         <select value={filterType} onChange={handleFilterTypeChange}>
           <option value="name_building">Nombre del edificio</option>
