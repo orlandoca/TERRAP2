@@ -94,7 +94,7 @@ export default function Landing() {
           </div>
         </div>
         &nbsp;
-        <div className="row">
+        <div className="row border border-primary p-4">
           <div className="col justify-content-center">
             <h2> Busca un espacio</h2>
             <p>
@@ -116,7 +116,7 @@ export default function Landing() {
           </div>
         </div>
         <br />
-        <div className="row align-items-center">
+        <div className="row align-items-center p-2">
           <div className="col text-center justify-content-center">
             <h2> Terrapp</h2>
             <h3> Portal que ayuda a convertir tus eventos en realidad </h3>
