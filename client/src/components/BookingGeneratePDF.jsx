@@ -1,20 +1,20 @@
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+import 'jspdf-autotable'; 
 // import { format } from 'date-fns';
 
-const BookingGeneratePDF = users => {
+const BookingGeneratePDF = booking => {
   const doc = new jsPDF();
   const tableColumn = ["Cantidad de personas", "Fecha", "Nombre"];
   const tableRows = [];
   
-  users.forEach(user => {
-    const userData = [
+  booking.forEach(booking => {
+    const bookingData = [
       booking.quantity,
       booking.date,
-      booking.user
+      booking.user.name
     ];
     
-    tableRows.push(userData);
+    tableRows.push(bookingData);
   });
   
   doc.autoTable(tableColumn, tableRows, { startY: 20 });
