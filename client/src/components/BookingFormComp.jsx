@@ -75,6 +75,15 @@ export default function BookingFormComp() {
             </select>
           </div>
           <div>
+            <label className="form-label"> Nombre del Edificio :</label>
+            <input
+              className="form-control"
+              type="text"
+              minLength={"4"}
+              {...register("name_building", { required: true })}
+            />
+          </div>
+          <div>
             <label className="form-label"> Motivo de la reserva :</label>
             <input
               className="form-control"

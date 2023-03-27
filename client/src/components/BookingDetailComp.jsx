@@ -54,6 +54,10 @@ export default function BookingDetailComp() {
             <td>{data["user"]?.["phone"]}</td>
           </tr>
           <tr>
+            <td>Nombre del edificio </td>
+            <td>{data["builing_name"]}</td>
+          </tr>
+          <tr>
             <td>Cantidad de personas </td>
             <td>{data["quantity"]}</td>
           </tr>

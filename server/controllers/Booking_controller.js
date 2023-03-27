@@ -5,7 +5,7 @@ const { User } = require("../models/User_model");
 exports.createBooking = async (req, res) => {
   try {
     const {
-      building_name,
+      name_building,
       reason,
       quantity,
       date,
@@ -20,6 +20,7 @@ exports.createBooking = async (req, res) => {
     console.log(typeof start_time);
     console.log(typeof end_time);
     console.log(typeof userId);
+    console.log(name_building);
 
     // Verifica si el usuario existe
     const user = await User.findById(userId);
@@ -29,7 +30,7 @@ exports.createBooking = async (req, res) => {
 
     // Crea la reserva con la referencia al usuario
     const booking = await Booking.create({
-      building_name,
+      name_building,
       reason,
       quantity: +quantity,
       date,
@@ -79,7 +80,7 @@ exports.updateBooking = async (req, res) => {
   try {
     const { id } = req.params;
     const {
-      building_name,
+      name_building,
       reason,
       quantity,
       date,
@@ -101,7 +102,7 @@ exports.updateBooking = async (req, res) => {
     }
 
     // Actualiza la reserva con la referencia al usuario
-    booking.building_name = building_name;
+    booking.name_building = name_building;
     booking.reason = reason;
     booking.quantity = quantity;
     booking.date = date;

@@ -28,8 +28,16 @@ export default function BookingEditComp() {
         `http://localhost:8000/api/booking/get/${id}`
       );
       // desestructurando nuestros datos obtenidos
-      const { user, reason, quantity, date, start_time, end_time } = res.data;
-      reset({ reason, quantity, date, start_time, end_time });
+      const {
+        user,
+        name_building,
+        reason,
+        quantity,
+        date,
+        start_time,
+        end_time,
+      } = res.data;
+      reset({ name_building, reason, quantity, date, start_time, end_time });
       setReservaUser(user);
       // setDateValue(new Date(date).toISOString().substr(0, 16));
       // setStartTimeValue(new Date(start_time).toISOString().substr(0, 16));
@@ -70,6 +78,7 @@ export default function BookingEditComp() {
   const updateBooking = (data) => {
     console.log("esto va a actualizar en reservas", data);
     const newbooking = {
+      name_building: data.name_building,
       reason: data.reason,
       quantity: data.quantity,
       date: data.date,
@@ -121,6 +130,15 @@ export default function BookingEditComp() {
               </select>
             </div>
             {/* FIN seleccionar inquilino */}
+            <div>
+              <label className="form-label"> Nombre del edificio :</label>
+              <input
+                className="form-control"
+                type="text"
+                minLength={"3"}
+                {...register("name_building", { required: true })}
+              />
+            </div>
             <div>
               <label className="form-label"> Motivo de la reserva :</label>
               <input
