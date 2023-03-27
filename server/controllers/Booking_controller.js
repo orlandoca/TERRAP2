@@ -1,21 +1,18 @@
 const { Booking, populate } = require("../models/Booking_model");
 const { User } = require("../models/User_model");
 
-//!METODO CREAR USUARIO
-module.exports.createUser = async (req, res) => {
-  try {
-    const user = await User.create(req.body);
-    res.json(user);
-  } catch (error) {
-    res.status(400);
-    res.json(error);
-  }
-};
-
 //! CREAR UNA NUEVA RESERVA
 exports.createBooking = async (req, res) => {
   try {
-    const { reason, quantity, date, start_time, end_time, userId } = req.body;
+    const {
+      building_name,
+      reason,
+      quantity,
+      date,
+      start_time,
+      end_time,
+      userId,
+    } = req.body;
 
     console.log(typeof reason);
     console.log(typeof quantity);
@@ -32,6 +29,7 @@ exports.createBooking = async (req, res) => {
 
     // Crea la reserva con la referencia al usuario
     const booking = await Booking.create({
+      building_name,
       reason,
       quantity: +quantity,
       date,
@@ -80,7 +78,15 @@ module.exports.getBooking = async (req, res) => {
 exports.updateBooking = async (req, res) => {
   try {
     const { id } = req.params;
-    const { reason, quantity, date, start_time, end_time, userId } = req.body;
+    const {
+      building_name,
+      reason,
+      quantity,
+      date,
+      start_time,
+      end_time,
+      userId,
+    } = req.body;
 
     // Verifica si la reserva existe
     let booking = await Booking.findById(id);
@@ -95,6 +101,7 @@ exports.updateBooking = async (req, res) => {
     }
 
     // Actualiza la reserva con la referencia al usuario
+    booking.building_name = building_name;
     booking.reason = reason;
     booking.quantity = quantity;
     booking.date = date;
@@ -133,21 +140,16 @@ module.exports.deleteBooking = async (req, res) => {
     return res.status(500).json({ message: "Hubo un error" });
   }
 };
-
-{
-  /* 
-
- module.exports.deleteBooking = async (request, response) => {
+//!METODO CREAR USUARIO
+module.exports.createUser = async (req, res) => {
   try {
-    const booking = await Booking.deleteOne({ _id: request.params.id });
-    response.json(booking);
+    const user = await User.create(req.body);
+    res.json(user);
   } catch (error) {
-    response.status(400);
-    response.json(error);
+    res.status(400);
+    res.json(error);
   }
-
-*/
-}
+};
 
 //! FIN Elimina una reserva por ID
 
