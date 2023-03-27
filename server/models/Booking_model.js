@@ -3,7 +3,7 @@ const User = require("./User_model");
 const AutoPopulate = require("mongoose-autopopulate");
 
 const BookingSchema = new mongoose.Schema({
-  building_name: {
+  name_building: {
     type: String,
   },
   reason: {

@@ -7,7 +7,10 @@ export default function BookingComp() {
   const [bookings, setBookings] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filterType, setFilterType] = useState("name");
+  const [filterTypeBuild, setFilterTypeBuild] = useState("name_building");
+
   const [filterDate, setFilterDate] = useState("");
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,6 +18,7 @@ export default function BookingComp() {
       const respuesta = await axios.get(
         `http://localhost:8000/api/booking/getAll/`
       );
+      console.log("Data booking", respuesta.data);
       setBookings(respuesta.data);
     };
 
@@ -24,38 +28,62 @@ export default function BookingComp() {
   const filteredBookings = bookings.filter((booking) => {
     if (filterType === "name") {
       return booking.user.name.toLowerCase().includes(searchText.toLowerCase());
+    } else if (filterTypeBuild === "name_building") {
+      return booking.name_building
+        .toLowerCase()
+        .includes(searchText.toLowerCase());
     } else if (filterType === "date") {
-      return new Date(booking.date)
-        .toLocaleDateString("es-ES")
-        .includes(filterDate);
+      const bookingDate = new Date(booking.date).toLocaleDateString("es-ES");
+      return bookingDate.includes(filterDate); // Agregado para el filtro de fecha
     }
   });
+
+  const handleFilterTypeChange = (e) => {
+    setFilterType(e.target.value);
+    setSearchText("");
+    // setFilterDate("");
+  };
+
+  const handleFilterInputChange = (e) => {
+    setSearchText(e.target.value);
+  };
+  const handleFilterDateChange = (e) => {
+    setFilterDate(e.target.value);
+  };
 
   return (
     <div>
       <h1>Lista De Reservas</h1>
       <div className="row pb-3">
-        <select
-          value={filterType}
-          onChange={(e) => setFilterType(e.target.value)}
-        >
+        <select value={filterType} onChange={handleFilterTypeChange}>
+          <option value="name_building">Nombre del edificio</option>
           <option value="name">Nombre del inquilino</option>
           <option value="date">Fecha de alquiler</option>
         </select>
         &nbsp; &nbsp;
+        {filterType === "name_building" && (
+          <input
+            id="id_filter"
+            type="text"
+            value={searchText}
+            onChange={handleFilterInputChange}
+            placeholder="Buscar por nombre del Edificio"
+          />
+        )}
         {filterType === "date" && (
           <input
             type="text"
             value={filterDate}
-            onChange={(e) => setFilterDate(e.target.value)}
+            onChange={handleFilterDateChange}
             placeholder="Buscar por fecha de alquiler"
           />
         )}
         {filterType === "name" && (
           <input
+            id="id_filter"
             type="text"
             value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
+            onChange={handleFilterInputChange}
             placeholder="Buscar por nombre del inquilino"
           />
         )}
@@ -64,6 +92,7 @@ export default function BookingComp() {
         <table className="table table-striped table-hover table-bordered">
           <thead>
             <tr>
+              <th>Nombre del edificio</th>
               <th>Nombre del inquilino</th>
               <th>Cantidad de Personas </th>
               <th>Fecha Alquiler </th>
@@ -74,6 +103,7 @@ export default function BookingComp() {
           <tbody>
             {filteredBookings.map((booking, index) => (
               <tr key={index}>
+                <td>{booking.name_building}</td>
                 <td>{booking.user.name}</td>
                 <td>{booking.quantity}</td>
                 <td>{new Date(booking.date).toLocaleDateString("es-ES")}</td>
