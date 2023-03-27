@@ -22,7 +22,7 @@ const UserReport = () => {
   return (
     <div>
           <button
-            className="btn btn-danger ml-10"
+            className="btn btn-info ml-10"
             onClick={() => GeneratePDF(users)}
           >
             Generar reporte
