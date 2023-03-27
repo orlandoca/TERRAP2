@@ -7,7 +7,6 @@ export default function BookingComp() {
   const [bookings, setBookings] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filterType, setFilterType] = useState("name");
-  const [filterTypeBuild, setFilterTypeBuild] = useState("name_building");
 
   const [filterDate, setFilterDate] = useState("");
 
@@ -28,7 +27,7 @@ export default function BookingComp() {
   const filteredBookings = bookings.filter((booking) => {
     if (filterType === "name") {
       return booking.user.name.toLowerCase().includes(searchText.toLowerCase());
-    } else if (filterTypeBuild === "name_building") {
+    } else if (filterType === "name_building") {
       return booking.name_building
         .toLowerCase()
         .includes(searchText.toLowerCase());
@@ -41,13 +40,11 @@ export default function BookingComp() {
   const handleFilterTypeChange = (e) => {
     setFilterType(e.target.value);
     setSearchText("");
-    // setFilterDate("");
+    setFilterDate("");
   };
 
   const handleFilterInputChange = (e) => {
     setSearchText(e.target.value);
-  };
-  const handleFilterDateChange = (e) => {
     setFilterDate(e.target.value);
   };
 
@@ -74,7 +71,7 @@ export default function BookingComp() {
           <input
             type="text"
             value={filterDate}
-            onChange={handleFilterDateChange}
+            onChange={handleFilterInputChange}
             placeholder="Buscar por fecha de alquiler"
           />
         )}
