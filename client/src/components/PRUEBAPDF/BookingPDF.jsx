@@ -2,7 +2,7 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import {format} from 'date-fns'
 // format DEBE SER DESDE LA API-->Ver para adaptar al proyecto
-export default function BookingDetailComp(){
+export default function BookingPDF(){
     const generatePDF = tickets=>{
     //INICIALIZO jsPDF
     const doc= new jsPDF();

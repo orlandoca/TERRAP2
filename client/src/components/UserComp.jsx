@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
+import UserReport from './UserReport'
 
 export default function UserComp() {
   const [users, setUsers] = useState([]);
@@ -19,8 +20,13 @@ export default function UserComp() {
   }, []);
 
   return (
-    <div>
-      <h1>Lista de Inquilinos</h1>
+    <div className="row">
+      <div className="d-flex justify-content-between align-items-center mb-2">
+        <h1 className="mb-0">Lista de Inquilinos</h1>
+        <div className="ml-auto">
+          <UserReport />
+        </div>
+      </div>
       <div className="row">
         <table className="table table-striped table-hover table-bordered">
           <thead>
@@ -56,15 +62,17 @@ export default function UserComp() {
             ))}
           </tbody>
         </table>
-        <div className="d-flex borde p-0">
-          <button
-            className="btn btn-primary"
-            onClick={() => navigate("/user/new")}
-          >
-            Agregar Nuevo Usuario
-          </button>
+        <div className="d-flex justify-content-center">
+          <div className="col">
+            <button
+                className="btn btn-primary"
+                onClick={() => navigate("/user/new")}
+              >
+                Agregar Nuevo Usuario
+            </button>
+          </div>
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
