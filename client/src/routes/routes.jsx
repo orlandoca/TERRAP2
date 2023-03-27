@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Landing from "../components/Landing";
 
 import BookingHome from "../pages/BookingHome";
 import Home from "../pages/Home";
@@ -14,7 +15,7 @@ import UserEditComp from "../components/UserEditComp";
 export function MyRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Landing />} />
       <Route path="/booking/home" element={<BookingHome />} />
       <Route path="/booking/new" element={<BookingAdd />} />
       <Route path="/booking/detail/:id" element={<BookingDetail />} />
@@ -24,6 +25,7 @@ export function MyRoutes() {
       <Route path="/user/new" element={<UserAdd />} />
       <Route path="/user/edit/:id" element={<UserEditComp />} />
       <Route path="/user/detail/:id" element={<UserDetailcomp />} />
+      <Route path="/home" element={<Home />} />
     </Routes>
   );
 }

@@ -1,14 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
-import { MyRoutes } from "../routes/routes";
 
 export default function Home() {
-  useEffect(() => {
-    console.log("hola");
-  }, []);
-
   const { user, isAuthenticated, loginWithRedirect } = useAuth0();
 
   return (
@@ -28,6 +21,9 @@ export default function Home() {
           </button>
         </div>
       )}
+      {/* <center>
+        <img src="https://i.imgur.com/J5cQGer.png" width="400" />
+      </center> */}
     </div>
   );
 }
