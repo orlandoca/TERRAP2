@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       {isAuthenticated ? (
         <div>
-          <h3> Bienvenido {user.name}</h3>
+          <h3 style={{ color: "Navy" }}> Bienvenido {user.name}</h3>
         </div>
       ) : (
         <div className="d-flex flex-column justify-content-center align-items-center">
