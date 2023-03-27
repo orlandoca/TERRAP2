@@ -23,20 +23,6 @@ export default function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        {/* buscar */}
-        <form className="d-flex" role="search">
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Buscar"
-            aria-label="Search"
-          />
-          <button className="btn" type="submit">
-            <i className="bi bi-search"></i>
-          </button>
-        </form>
-
-        {/* fin buscar */}
 
         {/* perfil */}
         <div className="nav-item dropdown m-auto text-bg-light">
