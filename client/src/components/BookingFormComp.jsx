@@ -56,7 +56,7 @@ export default function BookingFormComp() {
   return (
     <div className="container border border-primary p-3">
       <div className="col-lg-6">
-        <h6 className="col" style={{ color: "BlueViolet" }}>
+        <h6 className="col" style={{ color: "Navy" }}>
           Complete el formulario de reserva:
         </h6>
         <form onSubmit={handleSubmit(createBooking)}>
@@ -104,7 +104,7 @@ export default function BookingFormComp() {
           <div>
             <label className="form-label"> Fecha de la reserva:</label>
             <input
-              className="form-control"
+              className="form-control form-control-sm"
               type="datetime-local"
               {...register("date", { required: true })}
             />
@@ -112,7 +112,7 @@ export default function BookingFormComp() {
           <div>
             <label className="form-label"> Hora Inicio :</label>
             <input
-              className="form-control"
+              className="form-control form-control-sm"
               type="time"
               {...register("start_time", { required: true })}
             />
@@ -120,7 +120,7 @@ export default function BookingFormComp() {
           <div>
             <label className="form-label"> Hora Fin :</label>
             <input
-              className="form-control"
+              className="form-control form-control-sm"
               type="time"
               {...register("end_time", { required: true })}
             />
