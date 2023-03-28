@@ -9,14 +9,14 @@ const UserReport = () => {
     const getAllUsers = async () => {
       try {
         const response = await axios.get("http://localhost:8000/api/user/getAll");
-        console.log("Para ver que tiene USERS: ",users);
+        // console.log("Para ver que tiene USERS: ",users);
         setUsers(response.data);
       } catch (err) {
         console.log("error");
       }
     };
     
-    getAllUsers();
+    // getAllUsers();
   }, [users]);
 
   return (
