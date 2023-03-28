@@ -108,8 +108,8 @@ export default function BookingEditComp() {
     <div>
       <div className="container border border-primary p-3">
         <div className="col-lg-6">
-          <h6 className="col" style={{ color: "BlueViolet" }}>
-            Adherir una nueva reserva:
+          <h6 className="col" style={{ color: "Navy" }}>
+            Editar una reserva:
           </h6>
           <form onSubmit={handleSubmit(updateBooking)}>
             {/* seleccionar inquilino */}
@@ -160,7 +160,7 @@ export default function BookingEditComp() {
             <div>
               <label className="form-label"> Fecha de la reserva:</label>
               <input
-                className="form-control"
+                className="form-control form-control-sm"
                 type="datetime-local"
                 // value={dateValue}
                 // onChange={(e) => setDateValue(e.target.value)}
@@ -170,7 +170,7 @@ export default function BookingEditComp() {
             <div>
               <label className="form-label"> Hora Inicio :</label>
               <input
-                className="form-control"
+                className="form-control form-control-sm"
                 type="time"
                 // value={startTimeValue}
                 // onChange={(e) => setStartTimeValue(e.target.value)}
@@ -180,7 +180,7 @@ export default function BookingEditComp() {
             <div>
               <label className="form-label"> Hora Fin :</label>
               <input
-                className="form-control"
+                className="form-control form-control-sm"
                 type="time"
                 // value={endTimeValue}
                 // onChange={(e) => setEndTimeValue(e.target.value)}

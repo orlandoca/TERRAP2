@@ -55,7 +55,7 @@ export default function BookingDetailComp() {
           </tr>
           <tr>
             <td>Nombre del edificio </td>
-            <td>{data["builing_name"]}</td>
+            <td>{data["name_building"]}</td>
           </tr>
           <tr>
             <td>Cantidad de personas </td>
@@ -67,7 +67,7 @@ export default function BookingDetailComp() {
           </tr>
           <tr>
             <td>Fecha de reserva </td>
-            <td>{data["date"]}</td>
+            <td>{new Date(data["date"]).toLocaleDateString("es-ES")}</td>
           </tr>
           <tr>
             <td>Horario Inicio </td>
