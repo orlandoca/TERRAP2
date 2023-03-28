@@ -3,9 +3,10 @@ import LoginButton from "./LoginButton";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./LogoutButton";
 
-import img1 from "../assets/foto1.jpeg";
-import img2 from "../assets/foto2.jpeg";
-import img3 from "../assets/foto3.jpeg";
+import img1 from "../assets/evento1.jpeg";
+import img2 from "../assets/evento2.jpeg";
+import img3 from "../assets/evento3.jpeg";
+import logo from "../assets/logodefinitivo.png";
 
 export default function Landing() {
   const { user, isAuthenticated, loginWithRedirect } = useAuth0();
@@ -19,9 +20,9 @@ export default function Landing() {
         >
           <div className="col">
             <img
-              src="https://i.imgur.com/J5cQGer.png"
+              src={logo}
               width="150"
-              height="80"
+              height="100"
               alt="Terrap Logo"
               className="mx-auto my-auto"
             />
@@ -49,12 +50,9 @@ export default function Landing() {
           <div className="col-sm-4">
             <div class="card">
               <div class="text-center">
-                <img src={img1} alt="Fotos" class="img-fluid" />
+                <img src={img1} alt="Fotos" class="img-fluid" width="400" />
+                &nbsp;
                 <h3>Fotos y Rodajes</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  maximus mauris quis venenatis rutrum.
-                </p>
               </div>
             </div>
           </div>
@@ -64,15 +62,11 @@ export default function Landing() {
                 <img
                   src={img2}
                   alt="Cumpleaños"
-                  width="225"
-                  height="100"
+                  width="400"
                   className="img-fluid"
                 />
+                &nbsp;
                 <h3>Cumpleaños</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  maximus mauris quis venenatis rutrum.
-                </p>
               </div>
             </div>
           </div>
@@ -83,12 +77,10 @@ export default function Landing() {
                   src={img3}
                   alt="Eventos corporativos"
                   className="img-fluid"
+                  width="500"
                 />
+                &nbsp;
                 <h3>Eventos corporativos</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  maximus mauris quis venenatis rutrum.
-                </p>
               </div>
             </div>
           </div>

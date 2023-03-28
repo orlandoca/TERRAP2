@@ -22,6 +22,7 @@ export default function UserFormComp() {
           icon: "success",
           title: "GENIAL!!!",
           text: `Se ha agregado ${res.data.name}el usuario perfectamente!`,
+          position: "center",
           timer: 3000,
         });
         navigate("/user/home");

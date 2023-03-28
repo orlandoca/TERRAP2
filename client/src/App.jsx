@@ -17,7 +17,7 @@ export default function App() {
               <div className="col-2 ">
                 <Sidebar />
               </div>
-              <div className="col-10">
+              <div className="col-10 p-0">
                 <div className="row">
                   <Navbar />
                 </div>
