@@ -58,39 +58,42 @@ export default function BookingComp() {
         </div>
       </div>
       <div className="row pb-3">
-        <select value={filterType} onChange={handleFilterTypeChange}>
-          <option value="name_building">Nombre del edificio</option>
-          <option value="name">Nombre del inquilino</option>
-          <option value="date">Fecha de alquiler</option>
-        </select>
-        &nbsp; &nbsp;
-        {filterType === "name_building" && (
-          <input
-            id="id_filter"
-            type="text"
-            value={searchText}
-            onChange={handleFilterInputChange}
-            placeholder="Buscar por nombre del Edificio"
-          />
-        )}
-        {filterType === "date" && (
-          <input
-            type="text"
-            value={filterDate}
-            onChange={handleFilterInputChange}
-            placeholder="Buscar por fecha de alquiler"
-          />
-        )}
-        {filterType === "name" && (
-          <input
-            id="id_filter"
-            type="text"
-            value={searchText}
-            onChange={handleFilterInputChange}
-            placeholder="Buscar por nombre del inquilino"
-          />
-        )}
-      </div>
+        <div className="col-md-6 w-50">
+          <select className="w-75 form-select" value={filterType} onChange={handleFilterTypeChange}>
+            <option value="name_building">Nombre del edificio</option>
+            <option value="name">Nombre del inquilino</option>
+            <option value="date">Fecha de alquiler</option>
+          </select>
+        </div>
+        <div className="col-md-6">
+          {filterType === "name_building" && (
+            <input className="w-50 form-control"
+              id="id_filter"
+              type="text"
+              value={searchText}
+              onChange={handleFilterInputChange}
+              placeholder="Buscar por nombre del Edificio"
+            />
+          )}
+          {filterType === "date" && (
+            <input className="w-50 form-control"
+              type="text"
+              value={filterDate}
+              onChange={handleFilterInputChange}
+              placeholder="Buscar por fecha de alquiler"
+            />
+          )}
+          {filterType === "name" && (
+            <input className="w-50 form-control"
+              id="id_filter"
+              type="text"
+              value={searchText}
+              onChange={handleFilterInputChange}
+              placeholder="Buscar por nombre del inquilino"
+            />
+          )}
+        </div>
+</div>
       <div className="row">
         <table className="table table-striped table-hover table-bordered">
           <thead>

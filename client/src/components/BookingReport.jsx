@@ -11,7 +11,7 @@ const BookingReport = () => {
         const response = await axios.get(
           "http://localhost:8000/api/booking/getAll"
         );
-        console.log("Para ver que tiene Booking: ", booking);
+        // console.log("Para ver que tiene Booking: ", booking);
         setBooking(response.data);
       } catch (err) {
         console.log("error");

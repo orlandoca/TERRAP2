@@ -35,13 +35,18 @@ export default function BookingComp() {
     <div>
       <h1>Lista De Reservas</h1>
       <div className="row pb-3">
-        <select
-          value={filterType}
-          onChange={(e) => setFilterType(e.target.value)}
-        >
-          <option value="name">Nombre del inquilino</option>
-          <option value="date">Fecha de alquiler</option>
-        </select>
+        <div className="col">
+          <select
+            value={filterType}
+            onChange={(e) => setFilterType(e.target.value)}
+          >
+            <option value="name">Nombre del inquilino</option>
+            <option value="date">Fecha de alquiler</option>
+          </select>
+        </div>
+        <div className="col">
+
+        </div>
         &nbsp; &nbsp;
         {filterType === "date" && (
           <input
