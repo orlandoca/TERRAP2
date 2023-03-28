@@ -39,7 +39,7 @@ export default function UserFormComp() {
   return (
     <div className="container border border-primary p-3">
       <div className="col-lg-6">
-        <h6 className="col" style={{ color: "BlueViolet" }}>
+        <h6 className="col" style={{ color: "Navy" }}>
           Complete el formulario de inquilino:
         </h6>
         <form onSubmit={handleSubmit(createUser)}>
