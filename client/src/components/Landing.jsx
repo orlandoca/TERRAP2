@@ -24,7 +24,7 @@ export default function Landing() {
               width="150"
               height="100"
               alt="Terrap Logo"
-              className="mx-auto my-auto"
+              className="mx-auto my-auto border-primary"
             />
           </div>
           <div className="px-5">
@@ -35,7 +35,7 @@ export default function Landing() {
       <div className="container align-items-center justify-content-center ">
         &nbsp;
         <div className="row ">
-          <h2 className="text-center my-4">Espacios para tus eventos</h2>
+          <h1 className="text-center my-4">Espacios para tus eventos</h1>
           <p>
             Te presentamos nuestro servicio de alquiler de terrazas. Contamos
             con una amplia variedad de terrazas disponibles para todo tipo de
@@ -50,20 +50,25 @@ export default function Landing() {
           <div className="col-sm-4">
             <div class="card">
               <div class="text-center">
-                <img src={img1} alt="Fotos" class="img-fluid" width="400" />
+                <img
+                  src={img1}
+                  alt="Fotos"
+                  className="img-fluid rounded-start"
+                  width="400"
+                />
                 &nbsp;
                 <h3>Fotos y Rodajes</h3>
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="text-center">
+          <div className="col-sm-4">
+            <div className="card">
+              <div className="text-center">
                 <img
                   src={img2}
                   alt="Cumpleaños"
-                  width="400"
-                  className="img-fluid"
+                  width="360"
+                  className="img-fluid rounded-start"
                 />
                 &nbsp;
                 <h3>Cumpleaños</h3>
@@ -71,12 +76,12 @@ export default function Landing() {
             </div>
           </div>
           <div className="col-sm-4">
-            <div class="card">
+            <div className="card">
               <div className="text-center">
                 <img
                   src={img3}
                   alt="Eventos corporativos"
-                  className="img-fluid"
+                  className="img-fluid rounded-start"
                   width="500"
                 />
                 &nbsp;
@@ -86,21 +91,31 @@ export default function Landing() {
           </div>
         </div>
         &nbsp;
-        <div className="row border border-primary p-4">
+        <h1 className="justify-content-center p-1 ">
+          Reserva comodamente desde tu dispositivo y disfruta de tu evento{" "}
+        </h1>
+        &nbsp;
+        <div className="row  p-4">
           <div className="col justify-content-center">
-            <h2> Busca un espacio</h2>
+            <h2>
+              <i class="bi bi-1-square-fill m-1"></i>Busca un espacio
+            </h2>
             <p>
               Eliga el espacio que se adapte a sus necesidades entre las que
               tenemos en TERRAPP.
             </p>
           </div>
           <div className="col justify-content-center">
-            <h2>Contacta con el anfitrion </h2>
+            <h2>
+              <i class="bi bi-2-square-fill m-1"></i>Contacta con el anfitrion{" "}
+            </h2>
             <p> Podras comunicarte con el anfitrion y cerrar un trato </p>
           </div>
 
           <div className="col justify-content-center">
-            <h2>Confirma tu reserva</h2>
+            <h2>
+              <i class="bi bi-3-square-fill m-1"></i>Confirma tu reserva
+            </h2>
             <p>
               Cuando acepte tu solicitud solo resta pagar para confirmar tu
               reserva
@@ -110,10 +125,11 @@ export default function Landing() {
         <br />
         <div className="row align-items-center p-2">
           <div className="col text-center justify-content-center">
-            <h2> Terrapp</h2>
+            <h2> TERRAPP</h2>
             <h3> Portal que ayuda a convertir tus eventos en realidad </h3>
             <p>
-              <i class="bi bi-geo-fill"></i> Av. Francia Encarnacion,Paraguay
+              <i class="bi bi-geo-fill lead"></i> Av. Francia
+              Encarnacion,Paraguay
             </p>
           </div>
           <div className="col text-center">
@@ -132,20 +148,21 @@ export default function Landing() {
             Contactanos en nuestras redes sociales
           </div>
           <div className="col text-center mr-3">
-            <i class="bi bi-facebook"></i>Facebook
+            <i class="bi bi-facebook m-1"></i>Facebook
           </div>
           <div className="col text-center mr-3">
-            <i class="bi bi-twitter"></i>Twiter
+            <i class="bi bi-twitter m-1"></i>Twiter
           </div>
           <div className="col text-center">
-            <i class="bi bi-instagram"></i>Instagram
+            <i class="bi bi-instagram m-1 "></i>Instagram
           </div>
         </div>
         &nbsp;
+        <hr className="hr bg-secondary w-100" />
         <div className="row justify-content-center">
-          <div className="col text-center">
-            COPYRIGTH 2023-TERRAP &nbsp; TERMINOS Y CONDICIONES &nbsp; POLITICA
-            Y PRIVACIDAD
+          <div className="col d-flex justify-content-center">
+            COPYRIGTH 2023 TERRAP- ESPACIOS PARA TUS EVENTOS &nbsp;&nbsp;
+            TERMINOS Y CONDICIONES &nbsp;&nbsp; POLITICA Y PRIVACIDAD
           </div>
         </div>
         &nbsp;
