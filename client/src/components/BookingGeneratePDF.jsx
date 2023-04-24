@@ -18,7 +18,7 @@ const BookingGeneratePDF = (booking) => {
       booking.name_building,
       booking.user.name,
       booking.quantity,
-      booking.date,
+      new Date(booking.date).toLocaleDateString("es-ES"),
       booking.start_time,
     ];
 
